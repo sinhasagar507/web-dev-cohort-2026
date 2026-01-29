@@ -44,14 +44,12 @@ cd web-dev-cohort-2026/assignments/assignment-1
 
 <figure align="center">
   <img src="images/screenshot_1.png" alt="Upper half of resume" width="80%">
-  <figcaption><i>Figure 1: Header and Education sections using HTML tables.</i></figcaption>
 </figure>
 
 <br>
 
 <figure align="center">
   <img src="images/screenshot_2.png" alt="Lower half of resume" width="80%">
-  <figcaption><i>Figure 2: Experience and Skills sections highlighting semantic lists.</i></figcaption>
 </figure>
 
 ### Full Page Preview
