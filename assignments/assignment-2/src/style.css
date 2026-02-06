@@ -175,6 +175,10 @@ img, svg {
    HERO SECTION (Left Aligned & Smaller)
    ========================================= */
 
+/* =========================================
+   HERO SECTION (Visual Grid Removed)
+   ========================================= */
+
 .hero-section {
     position: relative;
     padding-top: 180px;
@@ -184,41 +188,25 @@ img, svg {
     text-align: left; 
 }
 
-/* 1. Background Grid */
+/* 1. Background Grid - REMOVED */
 .hero-grid-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    display: none; /* Hides the visual grid lines completely */
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    display: block; /* Ensures standard block flow (left to right) */
+    display: block; 
 }
 
-/* 2. Typography - Left Aligned & Smaller */
+/* 2. Typography */
 .hero-title {
-    /* Reduced size from previous 64px */
     font-size: 56px; 
     line-height: 1.1;
     font-weight: 500;
     letter-spacing: -1.5px;
     margin-bottom: 32px;
-    
-    /* Constrain width to force wrapping like the design */
     max-width: 850px; 
-    
-    /* Reset margins to ensure left alignment */
     margin-left: 0; 
     margin-right: 0;
     
@@ -229,26 +217,26 @@ img, svg {
     color: #fff;
 }
 
-/* 3. CTA Button - Left Aligned */
+/* 3. CTA Button */
 .hero-cta-wrapper {
-    margin-bottom: 60px;
-    display: flex; /* Flexbox allows explicit alignment control */
-    justify-content: flex-start; /* Aligns button to the start (left) */
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .btn-download {
     background-color: #ffffff;
     color: #000000;
     padding: 14px 24px;
-    border-radius: 12px;
+    border-radius: 40px;
     font-size: 16px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    
-    /* NO Animation/Transition */
+    transition: background-color 0.2s;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn-download:hover {
@@ -258,12 +246,19 @@ img, svg {
 /* 4. IDE Container */
 .ide-container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 12px;
+    
+    /* Premium Window Look */
     background: #000;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Shadow */
     box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 20px 50px rgba(0, 0, 0, 0.5), 
         0 0 100px rgba(0, 0, 0, 0.3);
+        
     overflow: hidden;
 }
 
@@ -271,6 +266,7 @@ img, svg {
     display: block;
     width: 100%;
     height: auto;
+    opacity: 0.95;
 }
 
 /* 3. CTA Button */
