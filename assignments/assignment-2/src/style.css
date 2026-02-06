@@ -418,7 +418,6 @@ img, svg {
 /* =========================================
    TRUSTED BY SECTION
    ========================================= */
-
 .trusted-by {
     /* Main section background color */
     background-color: #0a0a0a; 
@@ -428,7 +427,6 @@ img, svg {
 .section-label {
     text-align: center;
     font-size: 14px;
-    /* Light grey text color */
     color: #888888; 
     margin-bottom: 40px;
 }
@@ -436,52 +434,43 @@ img, svg {
 .logos-grid {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    gap: 16px; /* Space between the boxes */
+    flex-wrap: wrap; 
+    gap: 16px; 
 }
 
 .logo-item {
     /* Dark box background color */
     background-color: rgb(38, 36, 30); 
     border-radius: 8px;
-    padding: 28px 40px;
     
-    /* Flex layout to center content inside the box */
+    /* Fixed height helps keep the boxes identical regardless of image aspect ratio */
+    height: 80px; 
+    padding: 0 40px; /* Horizontal padding only */
+    
+    /* Flex layout to center the image */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Space between icon and text */
     
-    /* Text styling */
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 20px;
-    
-    /* Optional: Ensure a minimum width for consistency */
     min-width: 140px; 
-    transition: background-color 0.2s ease;
 }
 
-/* Optional hover effect */
 .logo-item:hover {
     background-color: #1a1a1a;
 }
 
-/* Placeholder styles for icons. 
-   Replace these with real SVGs in production.
-*/
-.icon-placeholder {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: currentColor; /* Uses the text color (#fff) */
-    border-radius: 4px;
+/* NEW: Controls the image sizing */
+.trusted-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+    /* This ensures all logos appear roughly the same size visually */
+    max-height: 26px; 
+    
+    /* Optional: If your images are black, this makes them white to match the theme */
+    /* filter: brightness(0) invert(1); */
 }
-
-/* Specific tweaks to mimic logo styles with text */
-.logo-item:nth-child(1) .logo-text { letter-spacing: -1px; } /* Stripe */
-.logo-item:nth-child(4) .logo-text { font-size: 16px; text-transform: uppercase; } /* Datadog */
-.logo-item:nth-child(5) .logo-text { font-size: 18px; } /* NVIDIA */
 
 /* Feature Splits */
 /* =========================================
