@@ -1,0 +1,887 @@
+/* =========================================
+  1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    /* Colors */
+    --bg-body: #000000;
+    --bg-surface: #0a0a0a;
+    --bg-surface-hover: #111111;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #666666;
+    
+    /* Accents */
+    --accent-blue: #3b82f6;
+    --border-color: #1f1f1f;
+    --border-light: #333333;
+
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Menlo', 'Monaco', 'Courier New', monospace;
+
+    /* Spacing */
+    --container-width: 1300px;
+    --header-height: 70px;
+}
+
+/* Modern Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility: Focus States */
+:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 4px;
+}
+
+/* Accessibility: Skip Link */
+.skip-to-content {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    background: var(--text-primary);
+    color: var(--bg-body);
+    padding: 1rem;
+    z-index: 9999;
+}
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Images & Icons */
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+.icon-sm { width: 16px; height: 16px; }
+
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+}
+.text-center { text-align: center; }
+.section-spacing { padding: 100px 0; }
+
+
+/* =========================================
+  2. HEADER & NAVIGATION (Critical)
+   ========================================= */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.nav-list a:hover { color: var(--text-primary); }
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-body);
+}
+.btn-primary:hover { background: #e5e5e5; }
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+}
+.btn-ghost:hover { color: var(--text-primary); }
+
+
+/* =========================================
+  3. HERO SECTION (Critical)
+   ========================================= */
+.hero-section {
+    padding-top: 180px;
+    padding-bottom: 80px;
+    position: relative;
+    /* Grid Background Pattern */
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    /* Fade out the grid at the bottom */
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+.hero-title {
+    font-size: clamp(32px, 5vw, 64px); /* Responsive Font Size */
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    margin-bottom: 32px;
+    max-width: 900px;
+    
+    /* Text Gradient */
+    background: linear-gradient(to bottom, #fff, #a1a1aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-cta-wrapper { margin-bottom: 60px; }
+
+.btn-download {
+    background: var(--text-primary);
+    color: var(--bg-body);
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+.btn-download:hover { background: #e2e2e2; }
+
+/* IDE Mockup */
+.ide-container {
+    background: #0c0c0c;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 80px rgba(0,0,0,0.6);
+}
+
+.ide-header {
+    height: 40px;
+    background: #1e1e1e;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+.window-controls { display: flex; gap: 8px; }
+.control { width: 12px; height: 12px; border-radius: 50%; }
+.control.red { background: #ff5f56; }
+.control.yellow { background: #ffbd2e; }
+.control.green { background: #27c93f; }
+
+.window-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.ide-body {
+    display: flex;
+    height: 500px; /* Fixed height for demo */
+}
+
+.ide-sidebar {
+    width: 200px;
+    border-right: 1px solid var(--border-light);
+    padding: 16px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.sidebar-title { display: block; margin-bottom: 12px; font-weight: bold; }
+.file-tree li { padding: 4px 0; list-style: none; }
+.file-tree li.active { color: var(--text-primary); }
+
+.ide-code-area {
+    flex: 1;
+    padding: 24px;
+    position: relative;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    background: #000;
+}
+
+/* Syntax Highlighting */
+.kwd { color: #569cd6; }
+.com { color: #6a9955; }
+.fn { color: #dcdcaa; }
+.line { display: block; margin-bottom: 4px; }
+
+
+/* =========================================
+   4. UI COMPONENTS (Secondary)
+   ========================================= */
+
+/* AI Bubble Overlay */
+.ai-prompt-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 380px;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.ai-header { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; }
+.ai-input-fake {
+    margin-top: 12px;
+    background: #222;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Trusted By */
+/* =========================================
+   TRUSTED BY SECTION
+   ========================================= */
+
+.trusted-by {
+    /* Main section background color */
+    background-color: #0a0a0a; 
+    padding: 80px 0;
+}
+
+.section-label {
+    text-align: center;
+    font-size: 14px;
+    /* Light grey text color */
+    color: #888888; 
+    margin-bottom: 40px;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 16px; /* Space between the boxes */
+}
+
+.logo-item {
+    /* Dark box background color */
+    background-color: #141414; 
+    border-radius: 8px;
+    padding: 28px 40px;
+    
+    /* Flex layout to center content inside the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Space between icon and text */
+    
+    /* Text styling */
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    
+    /* Optional: Ensure a minimum width for consistency */
+    min-width: 140px; 
+    transition: background-color 0.2s ease;
+}
+
+/* Optional hover effect */
+.logo-item:hover {
+    background-color: #1a1a1a;
+}
+
+/* Placeholder styles for icons. 
+   Replace these with real SVGs in production.
+*/
+.icon-placeholder {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor; /* Uses the text color (#fff) */
+    border-radius: 4px;
+}
+
+/* Specific tweaks to mimic logo styles with text */
+.logo-item:nth-child(1) .logo-text { letter-spacing: -1px; } /* Stripe */
+.logo-item:nth-child(4) .logo-text { font-size: 16px; text-transform: uppercase; } /* Datadog */
+.logo-item:nth-child(5) .logo-text { font-size: 18px; } /* NVIDIA */
+
+/* Feature Splits */
+/* =========================================
+   FEATURE SECTIONS (UPDATED)
+   ========================================= */
+
+.feature-split {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 160px; /* Increased spacing between sections for better flow */
+}
+
+/* Reverses the order for the middle section (Image Left, Text Right) */
+.feature-split.reversed {
+    flex-direction: row-reverse;
+}
+
+.feature-content {
+    flex: 1;
+    max-width: 480px; /* Limits text width for better readability */
+}
+
+.feature-content h2 {
+    font-size: 40px; /* Larger, bolder headings matching the reference */
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+}
+
+.feature-content p {
+    color: var(--text-secondary); /* Grey text */
+    font-size: 20px; /* Slightly larger body text */
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+/* The visual container for your screenshots */
+.feature-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Smooth corners for the images */
+    display: block;
+    /* Optional: Adds a subtle shadow if your screenshots don't have backgrounds */
+    /* box-shadow: 0 20px 40px rgba(0,0,0,0.3); */
+}
+
+/* Orange Link Style matching the images */
+.link-arrow.orange-accent {
+    color: #ff8f4a; /* Precise orange from the screenshots */
+    border-bottom: 1px solid transparent; /* Remove default underline */
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+}
+
+.link-arrow.orange-accent:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid #ff8f4a; /* Add underline on hover */
+}
+
+/* =========================================
+   TESTIMONIALS SECTION
+   ========================================= */
+
+.testimonials-section {
+    padding: 100px 0;
+    /* Optional: Ensure background matches main theme if not already inherited */
+    background-color: var(--bg-body); 
+}
+
+.testimonials-section .section-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+}
+
+.testimonials-grid {
+    display: grid;
+    /* Creates 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+}
+
+.testimonial-card {
+    /* Slightly lighter dark background for contrast */
+    background-color: #0f0f10; 
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px; /* Ensures uniform height */
+    transition: border-color 0.2s;
+}
+
+.testimonial-card:hover {
+    border-color: #3f3f46;
+}
+
+.quote-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e4e4e7; /* Off-white for readability */
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+.author-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px; /* Rounded squares as seen in image */
+    object-fit: cover;
+}
+
+/* Temporary placeholder style for avatars until you add images */
+.placeholder-avatar {
+    background-color: #333;
+    position: relative;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.author-title {
+    font-size: 13px;
+    color: #a1a1aa; /* Muted grey for titles */
+}
+
+/* =========================================
+   FRONTIER SECTION
+   ========================================= */
+
+/* Reuse container spacing */
+.frontier-section {
+    background-color: var(--bg-body);
+}
+
+/* Specific override for left-alignment if needed, 
+   otherwise inherits global h2 styles */
+.frontier-section .section-title.text-left {
+    text-align: left;
+    font-size: 32px; /* Slightly smaller than the main hero, matching the image */
+    margin-bottom: 40px;
+}
+
+.frontier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.frontier-card {
+    background-color: #0f0f10; /* Dark card background */
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures images don't overflow rounded corners */
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease;
+}
+
+.frontier-card:hover {
+    border-color: #3f3f46;
+}
+
+.card-content {
+    padding: 32px 32px 0 32px; /* Padding top/left/right only */
+    flex: 1; /* Allows text to push visual to bottom */
+}
+
+.frontier-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.frontier-card p {
+    font-size: 16px;
+    color: #a1a1aa; /* Standard muted grey */
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* The Orange Link reused from Features section */
+.link-arrow.orange-accent {
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.card-visual {
+    padding: 0 32px 32px 32px; /* Padding bottom/left/right */
+    margin-top: auto; /* Pushes the visual to the bottom of the card */
+}
+
+.visual-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    border: 1px solid #1f1f1f; /* Subtle border around the screenshot itself */
+}
+
+/* =========================================
+   CHANGELOG SECTION
+   ========================================= */
+.changelog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.changelog-card {
+    background-color: #0f0f10;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    padding: 24px;
+    display: block;
+    text-decoration: none;
+    transition: border-color 0.2s;
+    height: 100%;
+}
+
+.changelog-card:hover { border-color: #555; }
+
+.changelog-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.version-badge {
+    border: 1px solid #333;
+    border-radius: 99px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #fff;
+    font-family: var(--font-mono);
+}
+
+.changelog-date {
+    color: #888;
+    font-size: 13px;
+}
+
+.changelog-desc {
+    color: #e4e4e7;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.mt-4 { margin-top: 32px; display: inline-block; }
+
+
+/* =========================================
+   RESEARCH SECTION
+   ========================================= */
+.research-split {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: #0f0f10; /* Optional: if section needs bg */
+    /* Or keep transparent if body is black */
+}
+
+.research-text { flex: 1; padding: 40px 0; }
+.research-text h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    color: #e4e4e7;
+    font-weight: 400;
+}
+
+.research-image {
+    flex: 1.2;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   HIGHLIGHTS SECTION
+   ========================================= */
+.highlights-layout {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr; /* Sidebar vs Content ratio */
+    gap: 60px;
+}
+
+.highlights-sidebar h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #e4e4e7;
+}
+
+.highlights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.highlight-card {
+    display: block;
+    background: #0f0f10;
+    border: 1px solid #27272a;
+    padding: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+
+.highlight-card:hover { border-color: #555; }
+
+.highlight-card h4 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.highlight-card p {
+    color: #a1a1aa;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.highlight-meta {
+    font-size: 13px;
+    color: #666;
+    font-family: var(--font-mono);
+}
+
+
+/* =========================================
+   FINAL CTA SECTION
+   ========================================= */
+.final-cta-section {
+    padding: 160px 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.big-cta {
+    background: #fff;
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 99px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.big-cta:hover { background: #e2e2e2; }
+
+
+/* =========================================
+   FOOTER (DETAILED)
+   ========================================= */
+/* =========================================
+   FOOTER (Exact Dimensions)
+   ========================================= */
+
+.main-footer {
+    /* bg-theme-card-hex: Usually implies the surface/card color */
+    background-color: rgb(27, 25, 19); 
+    position: relative;
+    
+    /* Exact Padding from inspection */
+    padding-top: 67.2px;
+    padding-bottom: 30px;
+    
+    /* Font settings */
+    font-size: 14px;
+    color: #888;
+}
+
+/* Specific container to match the 1075px width measurement */
+.footer-container {
+    max-width: 1075px;
+    max-height: 465.42px; /* Allows height to adjust based on content */
+    width: 100%;
+    margin: 0 auto;
+    
+    /* Horizontal Padding */
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    /* Ensures padding doesn't expand width beyond 100% */
+    box-sizing: border-box; 
+}
+
+.footer-cols {
+    display: grid;
+    /* 5 Columns structure */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    /* Spacing between columns and bottom bar */
+    margin-bottom: 80px; 
+}
+
+/* Column Headings */
+.footer-col h4 {
+    color: #e4e4e7; /* Lighter text for headers */
+    font-weight: 500;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+/* Lists */
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 12px; }
+
+.footer-col ul li a {
+    color: #888; /* Muted text */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: #fff; }
+
+/* Bottom Bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: #666;
+}
+
+.soc-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+.control-btn:hover { color: #fff; }
+.control-btn svg { width: 16px; height: 16px; }
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #1a1a1a;
+    padding: 6px 12px;
+    border-radius: 99px;
+    color: #e4e4e7;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 12px;
+}
