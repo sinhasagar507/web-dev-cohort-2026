@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     /* Colors */
-    --bg-body: #000000;
+    --bg-body: rgb(19, 18, 10);
     --bg-surface: #0a0a0a;
     --bg-surface-hover: #111111;
     --text-primary: #ffffff;
@@ -89,7 +89,7 @@ img, svg {
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgb(19, 18, 10, 0.8); /* Semi-transparent for blur effect */
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     z-index: 1000;
@@ -157,56 +157,173 @@ img, svg {
 
 .btn-ghost {
     background: transparent;
+    /* Set base color for text and border */
     color: var(--text-secondary);
+    border-color: var(--border-light); /* Makes the box visible */
 }
+
 .btn-ghost:hover { color: var(--text-primary); }
 
 
 /* =========================================
   3. HERO SECTION (Critical)
    ========================================= */
+/* =========================================
+   HERO SECTION (Revamped)
+   ========================================= */
+/* =========================================
+   HERO SECTION (Left Aligned & Smaller)
+   ========================================= */
+
 .hero-section {
+    position: relative;
     padding-top: 180px;
     padding-bottom: 80px;
-    position: relative;
-    /* Grid Background Pattern */
+    overflow: hidden;
+    /* Aligns all inline content (like text/buttons) to the left */
+    text-align: left; 
+}
+
+/* 1. Background Grid */
+.hero-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-image: 
         linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
     background-size: 50px 50px;
-    /* Fade out the grid at the bottom */
     mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
 }
 
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: block; /* Ensures standard block flow (left to right) */
+}
+
+/* 2. Typography - Left Aligned & Smaller */
 .hero-title {
-    font-size: clamp(32px, 5vw, 64px); /* Responsive Font Size */
+    /* Reduced size from previous 64px */
+    font-size: 56px; 
     line-height: 1.1;
     font-weight: 500;
     letter-spacing: -1.5px;
     margin-bottom: 32px;
-    max-width: 900px;
     
-    /* Text Gradient */
-    background: linear-gradient(to bottom, #fff, #a1a1aa);
+    /* Constrain width to force wrapping like the design */
+    max-width: 850px; 
+    
+    /* Reset margins to ensure left alignment */
+    margin-left: 0; 
+    margin-right: 0;
+    
+    /* Gradient Text */
+    background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
-.hero-cta-wrapper { margin-bottom: 60px; }
+/* 3. CTA Button - Left Aligned */
+.hero-cta-wrapper {
+    margin-bottom: 60px;
+    display: flex; /* Flexbox allows explicit alignment control */
+    justify-content: flex-start; /* Aligns button to the start (left) */
+}
 
 .btn-download {
-    background: var(--text-primary);
-    color: var(--bg-body);
+    background-color: #ffffff;
+    color: #000000;
     padding: 14px 24px;
     border-radius: 12px;
+    font-size: 16px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
+    
+    /* NO Animation/Transition */
 }
-.btn-download:hover { background: #e2e2e2; }
+
+.btn-download:hover {
+    background-color: #e2e2e2;
+}
+
+/* 4. IDE Container */
+.ide-container {
+    width: 100%;
+    border-radius: 12px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.ide-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 3. CTA Button */
+.hero-cta-wrapper {
+    margin-bottom: 64px;
+}
+
+.btn-download {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    
+    /* Subtle glow for the button */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn-download:hover {
+    background-color: #e2e2e2;
+}
+
+/* 4. IDE Container (The "Hero" Image) */
+.ide-container {
+    width: 100%;
+    max-width: 1200px; /* Constrain max width for large screens */
+    margin: 0 auto;
+    border-radius: 12px;
+    
+    /* The "Premium" Window Look */
+    background: #000; /* Backing in case image has transparency */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    
+    /* Large shadow to lift it off the page */
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.5), /* Drop shadow */
+        0 0 100px rgba(0, 0, 0, 0.3);   /* Ambient glow */
+        
+    overflow: hidden; /* Clips image to border radius */
+}
+
+.ide-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.95; /* Optional: Slight blend with background */
+}
 
 /* IDE Mockup */
 .ide-container {
@@ -442,7 +559,6 @@ img, svg {
 /* =========================================
    TESTIMONIALS SECTION
    ========================================= */
-
 .testimonials-section {
     padding: 100px 0;
     /* Optional: Ensure background matches main theme if not already inherited */

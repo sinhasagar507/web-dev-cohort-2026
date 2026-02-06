@@ -22,14 +22,9 @@
     <header class="site-header">
         <div class="container nav-wrapper">
             <a href="/" class="logo" aria-label="Cursor Home">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                    <path d="M2 2l7.586 7.586"></path>
-                    <circle cx="11" cy="11" r="2"></circle>
-                </svg>
-                <span>CURSOR</span>
-            </a>
+    <img src="public/APP_ICON_2D_DARK.png" alt="Cursor Logo" width="40" height="40" aria-hidden="true">
+    <span>CURSOR</span>
+</a>
             
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul class="nav-list">
@@ -49,22 +44,24 @@
 
     <main id="main-content">
         
-  <section class="hero-section" aria-labelledby="hero-title">
-    <div class="container">
+<section class="hero-section" aria-labelledby="hero-title">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <div class="container hero-content">
         <h1 id="hero-title" class="hero-title">Built to make you extraordinarily productive, Cursor is the best way to code with AI.</h1>
         
         <div class="hero-cta-wrapper">
-            <a href="#" class="btn btn-download">
+            <a href="#" class="btn-download">
                 Download for macOS 
                 <i data-lucide="arrow-down" class="icon-sm"></i>
             </a>
         </div>
 
         <div class="ide-container">
-            <img src="public/cursor_bg_1.png" alt="Screenshot of Cursor IDE interface showing the Composer feature building a landing page based on natural language prompts." style="display: block; width: 100%; height: auto; border-radius: inherit;">
+            <img src="public/cursor_bg_1.png" alt="Cursor IDE interface" class="ide-screenshot">
         </div>
     </div>
-  </section>
+</section>
 
        <section class="trusted-by">
     <div class="container">
@@ -96,9 +93,7 @@
                 <span class="logo-text">ramp</span>
                 <i class="icon-placeholder icon-ramp-tail"></i>
             </div>
-            <div class="logo-item">
-                <span class="logo-text">Adobe</span>
-            </div>
+  
         </div>
     </div>
 </section>
