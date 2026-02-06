@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Mintlify</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../public/mintlify-logo.svg" alt="Mintlify" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../documentation/index.html" class="nav-link active">Documentation</a></li>
+                    <li><a href="../customers/index.html" class="nav-link">Customers</a></li>
+                    <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                    <li><a href="../pricing/index.html" class="nav-link">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="btn-secondary">Contact sales</button>
+                <button class="btn-primary">Start for free</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h4>Getting Started</h4>
+                    <ul class="sidebar-nav">
+                        <li><a href="#" class="sidebar-link active">Introduction</a></li>
+                        <li><a href="#">Quick Start</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Configuration</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4>Writing Content</h4>
+                    <ul class="sidebar-nav">
+                        <li><a href="#" class="sidebar-link">Markdown Basics</a></li>
+                        <li><a href="#" class="sidebar-link">Components</a></li>
+                        <li><a href="#" class="sidebar-link">Code Blocks</a></li>
+                        <li><a href="#" class="sidebar-link">Images & Media</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4>Customization</h4>
+                    <ul class="sidebar-nav">
+                        <li><a href="#" class="sidebar-link">Themes</a></li>
+                        <li><a href="#" class="sidebar-link">Navigation</a></li>
+                        <li><a href="#" class="sidebar-link">Branding</a></li>
+                        <li><a href="#" class="sidebar-link">Custom CSS</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4>Integrations</h4>
+                    <ul class="sidebar-nav">
+                        <li><a href="#" class="sidebar-link">GitHub</a></li>
+                        <li><a href="#" class="sidebar-link">GitLab</a></li>
+                        <li><a href="#" class="sidebar-link">Analytics</a></li>
+                        <li><a href="#" class="sidebar-link">Search</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4>API Reference</h4>
+                    <ul class="sidebar-nav">
+                        <li><a href="#" class="sidebar-link">Authentication</a></li>
+                        <li><a href="#" class="sidebar-link">Endpoints</a></li>
+                        <li><a href="#" class="sidebar-link">Webhooks</a></li>
+                        <li><a href="#" class="sidebar-link">SDKs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-main">
+            <div class="docs-content">
+                <div class="docs-header">
+                    <h1>Introduction to Mintlify</h1>
+                    <p class="docs-subtitle">Build beautiful documentation that converts users</p>
+                </div>
+
+                <div class="docs-body">
+                    <section class="docs-section">
+                        <h2>What is Mintlify?</h2>
+                        <p>Mintlify is the intelligent documentation platform that helps teams create and maintain world-class documentation built for both humans and AI. Our platform integrates seamlessly with your existing workflow and provides powerful tools to make your documentation shine.</p>
+                        
+                        <div class="feature-highlight">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li><strong>AI-Powered Writing:</strong> Get intelligent suggestions and automated content generation</li>
+                                <li><strong>Beautiful Themes:</strong> Choose from professionally designed themes or customize your own</li>
+                                <li><strong>Developer-Friendly:</strong> Write in Markdown with powerful extensions</li>
+                                <li><strong>Fast Performance:</strong> Lightning-fast sites with excellent SEO</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Getting Started</h2>
+                        <p>Follow these steps to create your first documentation site with Mintlify:</p>
+                        
+                        <div class="step-by-step">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Install Mintlify CLI</h4>
+                                    <div class="code-block">
+                                        <code>npm install -g mintlify</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Initialize Your Project</h4>
+                                    <div class="code-block">
+                                        <code>mintlify init</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Start Development Server</h4>
+                                    <div class="code-block">
+                                        <code>mintlify dev</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Deploy Your Site</h4>
+                                    <div class="code-block">
+                                        <code>mintlify deploy</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Configuration</h2>
+                        <p>Customize your documentation site by editing the <code>mint.json</code> configuration file:</p>
+                        
+                        <div class="code-block large">
+                            <pre><code>{
+  "name": "My Documentation",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#1a1a1a",
+    "light": "#f8f9fa",
+    "dark": "#1a1a1a"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "installation"
+      ]
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Next Steps</h2>
+                        <div class="next-steps-grid">
+                            <div class="next-step-card">
+                                <h4>📝 Write Content</h4>
+                                <p>Learn how to write compelling documentation using Markdown and our components.</p>
+                                <a href="#" class="next-step-link">Writing Guide →</a>
+                            </div>
+
+                            <div class="next-step-card">
+                                <h4>🎨 Customize Design</h4>
+                                <p>Make your documentation unique with custom themes and branding.</p>
+                                <a href="#" class="next-step-link">Customization →</a>
+                            </div>
+
+                            <div class="next-step-card">
+                                <h4>🔗 Add Integrations</h4>
+                                <p>Connect your documentation with GitHub, analytics, and more.</p>
+                                <a href="#" class="next-step-link">Integrations →</a>
+                            </div>
+
+                            <div class="next-step-card">
+                                <h4>🚀 Deploy</h4>
+                                <p>Publish your documentation and share it with the world.</p>
+                                <a href="#" class="next-step-link">Deployment →</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Page Navigation -->
+                <div class="page-nav">
+                    <div class="page-nav-item">
+                        <span class="page-nav-label">Next</span>
+                        <a href="#" class="page-nav-link">Quick Start →</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

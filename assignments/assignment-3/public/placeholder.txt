@@ -1,0 +1,28 @@
+# Image Assets Needed
+
+This folder should contain the following image assets:
+
+## Logos and Branding
+- mintlify-logo.svg (main logo)
+- anthropic-logo.svg
+- coinbase-logo.svg
+- hubspot-logo.svg
+- zapier-logo.svg
+- att-logo.svg
+
+## Customer Logos
+- perplexity-logo.svg
+- x-logo.svg
+- kalshi-logo.svg
+- cognition-logo.svg
+- together-logo.svg
+- laravel-logo.svg
+
+## Illustrations
+- hero-illustration.png (main hero image)
+- anthropic-bg.jpg (customer story background)
+
+## Security Badges
+- soc2-badge.png
+
+Note: These are placeholder references. In a real project, you would obtain proper brand assets from the respective companies or create appropriate placeholder graphics.

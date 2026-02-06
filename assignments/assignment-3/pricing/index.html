@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Mintlify</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../public/mintlify-logo.svg" alt="Mintlify" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../documentation/index.html" class="nav-link">Documentation</a></li>
+                    <li><a href="../customers/index.html" class="nav-link">Customers</a></li>
+                    <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                    <li><a href="../pricing/index.html" class="nav-link active">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="btn-secondary">Contact sales</button>
+                <button class="btn-primary">Start for free</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Simple, transparent pricing</h1>
+                <p>Choose the plan that's right for your team. Start free and scale as you grow.</p>
+                
+                <!-- Billing Toggle -->
+                <div class="billing-toggle">
+                    <span class="billing-label">Monthly</span>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="billing-toggle" class="toggle-input">
+                        <label for="billing-toggle" class="toggle-label"></label>
+                    </div>
+                    <span class="billing-label">Annual <span class="discount-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="plans-grid">
+                <!-- Free Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Free</h3>
+                        <div class="plan-price">
+                            <span class="price">$0</span>
+                            <span class="period">forever</span>
+                        </div>
+                        <p class="plan-description">Perfect for personal projects and small teams getting started</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Up to 3 team members
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Unlimited public docs
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Basic themes
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Community support
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                GitHub integration
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-cta">
+                        <button class="btn-outline-large">Get started free</button>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Pro</h3>
+                        <div class="plan-price">
+                            <span class="price monthly">$29</span>
+                            <span class="price annual" style="display: none;">$23</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For growing teams that need advanced features and customization</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Up to 10 team members
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Unlimited private docs
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Custom branding
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                AI-powered suggestions
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Advanced analytics
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Priority support
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Custom domain
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-cta">
+                        <button class="btn-primary-large">Start free trial</button>
+                        <p class="trial-note">14-day free trial, no credit card required</p>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="price">Custom</span>
+                        </div>
+                        <p class="plan-description">For large organizations with advanced security and compliance needs</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Unlimited team members
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                SAML SSO
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Advanced permissions
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                SOC 2 compliance
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Dedicated support
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                Custom integrations
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                SLA guarantee
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-cta">
+                        <button class="btn-outline-large">Contact sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="feature-comparison">
+        <div class="container">
+            <h2>Compare all features</h2>
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="feature-column">Features</div>
+                    <div class="plan-column">Free</div>
+                    <div class="plan-column">Pro</div>
+                    <div class="plan-column">Enterprise</div>
+                </div>
+                
+                <div class="table-section">
+                    <div class="section-title">Core Features</div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">Team members</div>
+                        <div class="feature-value">Up to 3</div>
+                        <div class="feature-value">Up to 10</div>
+                        <div class="feature-value">Unlimited</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">Public documentation</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">Private documentation</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">Custom branding</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                </div>
+                
+                <div class="table-section">
+                    <div class="section-title">AI & Analytics</div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">AI-powered suggestions</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">Advanced analytics</div>
+                        <div class="feature-value">Basic</div>
+                        <div class="feature-value">✓</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                </div>
+                
+                <div class="table-section">
+                    <div class="section-title">Security & Compliance</div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">SAML SSO</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="feature-name">SOC 2 compliance</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">—</div>
+                        <div class="feature-value">✓</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="pricing-faq">
+        <div class="container">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Can I change plans anytime?</h4>
+                    <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and we'll prorate any billing adjustments.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do you offer refunds?</h4>
+                    <p>We offer a 30-day money-back guarantee for all paid plans. If you're not satisfied, contact us for a full refund.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept all major credit cards (Visa, MasterCard, American Express) and PayPal. Enterprise customers can also pay by invoice.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is there a setup fee?</h4>
+                    <p>No, there are no setup fees or hidden costs. You only pay for your chosen plan, and you can start with our free tier.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I try Pro features for free?</h4>
+                    <p>Yes! We offer a 14-day free trial of our Pro plan with no credit card required. You can explore all features risk-free.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What happens if I exceed my plan limits?</h4>
+                    <p>We'll notify you when you're approaching your limits. You can upgrade your plan or we'll help you find the best solution for your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to get started?</h2>
+                <p>Join thousands of teams already building better documentation with Mintlify</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary-large">Start free trial</button>
+                    <button class="btn-outline-large">Schedule demo</button>
+                </div>
+                <p class="cta-note">No credit card required • 14-day free trial • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>explore</h4>
+                    <ul>
+                        <li><a href="#">Startups</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Switch</a></li>
+                        <li><a href="#">OSS Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>resources</h4>
+                    <ul>
+                        <li><a href="../customers/index.html">Customers</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../pricing/index.html">Pricing</a></li>
+                        <li><a href="../resources/index.html">Guides</a></li>
+                        <li><a href="#">Feature Requests</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>documentation</h4>
+                    <ul>
+                        <li><a href="../documentation/index.html">Getting Started</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Wall of Love</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms Of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <span>© 2026 Mintlify, Inc.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

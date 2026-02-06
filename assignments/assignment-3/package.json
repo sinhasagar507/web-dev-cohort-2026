@@ -1,0 +1,26 @@
+{
+  "name": "mintlify-replica",
+  "version": "1.0.0",
+  "description": "A frontend replica of the Mintlify website built with vanilla HTML and CSS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "bun --hot index.html",
+    "serve": "python3 -m http.server 3000",
+    "build": "echo 'No build step needed for vanilla HTML/CSS'",
+    "start": "bun run serve"
+  },
+  "keywords": [
+    "mintlify",
+    "documentation",
+    "frontend",
+    "html",
+    "css",
+    "replica"
+  ],
+  "author": "Web Dev Cohort 2026",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
