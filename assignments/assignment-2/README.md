@@ -115,7 +115,7 @@ This project recreates the structure and design of the Cursor website (https://c
 - **Grid System**: CSS Grid for major layouts
 - **Responsive Breakpoints**: Desktop-first approach
 
-## 🛠 Technical Implementation
+## Technical Implementation
 
 ### HTML Structure
 
