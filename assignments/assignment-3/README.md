@@ -138,7 +138,7 @@ This project recreates the structure and design of the Mintlify website (https:/
 - **Spacing**: Consistent 8px grid system
 - **Border Radius**: 8px, 12px, 16px, 20px for different elements
 
-## 🛠 Technical Implementation
+## Technical Implementation
 
 ### HTML Structure
 - Semantic HTML5 elements
@@ -201,7 +201,7 @@ Using Node.js (if available):
 npx serve .
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 assignment-3/
