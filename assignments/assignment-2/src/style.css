@@ -419,7 +419,6 @@ img, svg {
    TRUSTED BY SECTION
    ========================================= */
 .trusted-by {
-    /* Main section background color */
     background-color: #0a0a0a; 
     padding: 80px 0;
 }
@@ -431,45 +430,19 @@ img, svg {
     margin-bottom: 40px;
 }
 
-.logos-grid {
+/* Wrapper to ensure the image centers perfectly */
+.trusted-logos-wrapper {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
-    gap: 16px; 
+    width: 100%;
 }
 
-.logo-item {
-    /* Dark box background color */
-    background-color: rgb(38, 36, 30); 
-    border-radius: 8px;
-    
-    /* Fixed height helps keep the boxes identical regardless of image aspect ratio */
-    height: 80px; 
-    padding: 0 40px; /* Horizontal padding only */
-    
-    /* Flex layout to center the image */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    min-width: 140px; 
-}
-
-.logo-item:hover {
-    background-color: #1a1a1a;
-}
-
-/* NEW: Controls the image sizing */
-.trusted-logo {
+/* Responsive styles for the screenshot */
+.trusted-logos-img {
     display: block;
-    max-width: 100%;
-    height: auto;
-    
-    /* This ensures all logos appear roughly the same size visually */
-    max-height: 26px; 
-    
-    /* Optional: If your images are black, this makes them white to match the theme */
-    /* filter: brightness(0) invert(1); */
+    max-width: 100%; /* Ensures it shrinks on mobile */
+    height: auto;    /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: smooths corners if the screenshot has them */
 }
 
 /* Feature Splits */
