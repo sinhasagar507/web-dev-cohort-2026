@@ -2,7 +2,11 @@
 
 A frontend replica of the Mintlify documentation platform website, built with vanilla HTML and CSS as part of the Web Dev Cohort 2026 assignment.
 
-## 🎯 Project Overview
+## Project Hosting
+
+Used Netlify to host the project at the URL: https://mintlifywebsitereplica.netlify.app/
+
+## Project Overview
 
 This project recreates the structure and design of the Mintlify website (https://www.mintlify.com/) focusing on:
 - Desktop-first responsive design
@@ -11,9 +15,11 @@ This project recreates the structure and design of the Mintlify website (https:/
 - Pure CSS styling (no frameworks)
 - Professional documentation website layout
 
-## 📋 Complete Website Structure
+## Complete Website Structure
 
-### ✅ Main Homepage (index.html)
+### Main Homepage (index.html)
+
+![Home Page](public/home_page.png)
 
 1. **Top Navigation Bar**
    - Mintlify logo with proper SVG
@@ -61,14 +67,18 @@ This project recreates the structure and design of the Mintlify website (https:/
    - Security badges and compliance info
    - Copyright and company information
 
-### ✅ Resources Page (/resources/index.html)
+### Resources Page (/resources/index.html)
+
+![Resources Page](public/resources_page.png)
 
 - **Resource Categories**: Guides, Templates, Developer Tools, Community
 - **Popular Resources**: Featured articles and downloads
 - **Newsletter Signup**: Email subscription form
 - **Category Cards**: Interactive hover effects with resource lists
 
-### ✅ Documentation Page (/documentation/index.html)
+### Documentation Page (/documentation/index.html)
+
+![Documentation Page](public/documentation_page.png)
 
 - **Documentation Layout**: Sidebar navigation + main content
 - **Sidebar Navigation**: Organized by sections (Getting Started, Writing Content, etc.)
@@ -76,7 +86,9 @@ This project recreates the structure and design of the Mintlify website (https:/
 - **Interactive Elements**: Code blocks, step-by-step instructions
 - **Next Steps**: Action cards for further learning
 
-### ✅ Customers Page (/customers/index.html)
+### Customers Page (/customers/index.html)
+
+![Customers Page](public/customer_page.png)
 
 - **Customer Logos Grid**: 8+ company logos
 - **Featured Case Study**: Anthropic spotlight with metrics
@@ -84,7 +96,9 @@ This project recreates the structure and design of the Mintlify website (https:/
 - **Testimonials**: Customer quotes with author information
 - **Customer CTA**: Trial and demo options
 
-### ✅ Blog Page (/blog/index.html)
+### Blog Page (/blog/index.html)
+
+![Blog Page](public/blog_page.png)
 
 - **Featured Article**: Large highlighted blog post
 - **Category Navigation**: Filterable blog categories
@@ -92,7 +106,9 @@ This project recreates the structure and design of the Mintlify website (https:/
 - **Newsletter Signup**: Subscription with disclaimer
 - **Author Information**: Avatar and author details
 
-### ✅ Pricing Page (/pricing/index.html)
+### Pricing Page (/pricing/index.html)
+
+![Pricing Page](public/pricing_page.png)
 
 - **Billing Toggle**: Monthly/Annual with discount badge
 - **Three Pricing Tiers**: Free, Pro (featured), Enterprise
@@ -100,7 +116,7 @@ This project recreates the structure and design of the Mintlify website (https:/
 - **FAQ Section**: Common pricing questions
 - **Pricing CTA**: Multiple conversion options
 
-## 🎨 Design Specifications
+## Design Specifications
 
 ### Fonts
 - **Primary Font**: Inter (Google Fonts)
@@ -144,7 +160,7 @@ This project recreates the structure and design of the Mintlify website (https:/
 - Mobile breakpoint (768px)
 - Flexible grid systems
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Bun runtime installed
@@ -154,8 +170,8 @@ This project recreates the structure and design of the Mintlify website (https:/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd assignment-3
+git clone https://github.com/sinhasagar507/web-dev-cohort-2026.git
+cd web-dev-cohort-2026/assignments/assignment-3
 ```
 
 2. Install dependencies:
@@ -203,39 +219,25 @@ assignment-3/
 ├── src/
 │   └── style.css                # Complete stylesheet for all pages
 ├── public/
-│   ├── mintlify-logo.svg        # Main logo
-│   ├── hero-illustration.svg    # Hero section graphic
-│   ├── anthropic-logo.svg       # Company logos (all SVGs)
-│   ├── coinbase-logo.svg
-│   ├── hubspot-logo.svg
-│   ├── zapier-logo.svg
-│   ├── att-logo.svg
-│   ├── perplexity-logo.svg
-│   ├── x-logo.svg
-│   ├── kalshi-logo.svg
-│   ├── cognition-logo.svg
-│   ├── together-logo.svg
-│   ├── laravel-logo.svg
-│   ├── soc2-badge.svg           # Security badge
-│   └── favicon.ico              # Site favicon
+│   ├── logos and images        # Site favicon
 ├── package.json                 # Project configuration
 ├── README.md                    # This documentation
 └── bun.lock                     # Dependency lock file
 ```
 
-## 🎯 Assignment Requirements Met
+## Assignment Requirements Met
 
-- ✅ Desktop-first design
-- ✅ HTML and CSS only (no JavaScript)
-- ✅ No TailwindCSS or frameworks
-- ✅ Structural accuracy to original
-- ✅ Professional typography and spacing
-- ✅ Consistent color scheme
-- ✅ Hover effects and interactions
-- ✅ Semantic HTML structure
-- ✅ Clean, maintainable CSS
+- Desktop-first design
+- HTML and CSS only (no JavaScript)
+- No TailwindCSS or frameworks
+- Structural accuracy to original
+- Professional typography and spacing
+- Consistent color scheme
+- Hover effects and interactions
+- Semantic HTML structure
+- Clean, maintainable CSS
 
-## 🖼 Assets Needed
+## Assets Needed
 
 The project references several image assets that would need to be obtained:
 
@@ -251,7 +253,7 @@ The project references several image assets that would need to be obtained:
 
 *Note: In this replica, placeholder references are used. In a production environment, proper brand assets would be obtained through official channels.*
 
-## 🔧 Development Notes
+## Development Notes
 
 ### Browser Compatibility
 - Modern browsers (Chrome 90+, Firefox 88+, Safari 14+)
@@ -263,16 +265,16 @@ The project references several image assets that would need to be obtained:
 - Efficient use of CSS Grid and Flexbox
 - Minimal external dependencies (only Google Fonts)
 
-## 📝 Future Enhancements
+## Future Enhancements
 
-- [ ] Add proper image assets
-- [ ] Implement smooth scroll navigation
-- [ ] Add loading animations
-- [ ] Enhanced mobile responsiveness
-- [ ] Dark mode toggle
-- [ ] Accessibility improvements (ARIA labels, focus states)
+- Add proper image assets
+- Implement smooth scroll navigation
+- Add loading animations
+- Enhanced mobile responsiveness
+- Dark mode toggle
+- Accessibility improvements (ARIA labels, focus states)
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 - Advanced CSS Grid and Flexbox layouts
@@ -281,14 +283,3 @@ This project demonstrates:
 - Clean, semantic HTML structure
 - Modern CSS techniques (backdrop-filter, gradients, transitions)
 - Project organization and documentation
-
-## 📄 License
-
-This project is created for educational purposes as part of the Web Dev Cohort 2026 assignment.
-
----
-
-**Assignment**: Documentation Website - Mintlify  
-**Cohort**: Web Dev Cohort 2026  
-**Timeline**: Feb 1-7, 2026  
-**Focus**: HTML & CSS Implementation
