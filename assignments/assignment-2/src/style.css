@@ -446,7 +446,7 @@ img, svg {
 
 .logo-item {
     /* Dark box background color */
-    background-color: #141414; 
+    background-color: rgb(38, 36, 30); 
     border-radius: 8px;
     padding: 28px 40px;
     
@@ -728,7 +728,7 @@ img, svg {
 }
 
 .changelog-card {
-    background-color: #0f0f10;
+    background-color: rgb(38, 36, 30);
     border: 1px solid #27272a;
     border-radius: 8px;
     padding: 24px;
