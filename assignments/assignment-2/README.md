@@ -188,7 +188,7 @@ assignment-2/
 ├── index.html              # Main HTML file
 ├── src/
 │   └── style.css          # Main stylesheet (1100+ lines)
-├── public/
+├── public/                # Images and assets  
 │   
 ├── package.json           # Project configuration
 ├── README.md             # This file
@@ -254,7 +254,18 @@ assignment-2/
 - Enhanced mobile responsiveness
 - Dark/light mode toggle
 - Loading animations
-- Advanced accessibility features
+- Advanced accessibility features 
+
+## App Screenshots
+![Screenshot_1](public/cursor_1.png)
+![Screenshot_2](public/cursor_2.png)
+![Screenshot_3](public/cursor_3.png)
+![Screenshot_4](public/cursor_4.png)
+![Screenshot_5](public/cursor_5.png)
+![Screenshot_6](public/cursor_6.png)
+![Screenshot_7](public/cursor_7.png)
+![Screenshot_8](public/cursor_8.png)
+![Screenshot_9](public/cursor_9.png)
 
 ## Learning Outcomes
 
