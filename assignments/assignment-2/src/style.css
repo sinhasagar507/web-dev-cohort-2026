@@ -78,7 +78,7 @@ img, svg {
     display: grid;
 }
 .text-center { text-align: center; }
-.section-spacing { padding: 100px 0; }
+.section-spacing { padding: 80px 0; }
 
 
 /* =========================================
@@ -89,9 +89,9 @@ img, svg {
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background: rgb(19, 18, 10, 0.8); /* Semi-transparent for blur effect */
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgb(19, 18, 10); 
+    backdrop-filter: blur(12px); */
+    border-bottom: none;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -179,18 +179,21 @@ img, svg {
    HERO SECTION (Visual Grid Removed)
    ========================================= */
 
+/* =========================================
+   HERO SECTION (Typography Fix)
+   ========================================= */
+
 .hero-section {
     position: relative;
     padding-top: 180px;
     padding-bottom: 80px;
     overflow: hidden;
-    /* Aligns all inline content (like text/buttons) to the left */
     text-align: left; 
 }
 
-/* 1. Background Grid - REMOVED */
+/* Hide grid if you want the clean black look from the screenshots */
 .hero-grid-bg {
-    display: none; /* Hides the visual grid lines completely */
+    display: none; 
 }
 
 .hero-content {
@@ -199,25 +202,30 @@ img, svg {
     display: block; 
 }
 
-/* 2. Typography */
+/* Typography matching the reference image */
 .hero-title {
-    font-size: 56px; 
-    line-height: 1.1;
-    font-weight: 500;
-    letter-spacing: -1.5px;
+    /* Large size for impact */
+    font-size: 28px; 
+    
+    /* Tighter line height prevents it from looking spaced out */
+    line-height: 1.1; 
+    
+    /* Lighter weight (300-400) creates that premium, sleek look */
+    font-weight: 300; 
+    
+    /* Negative spacing tightens the letters like the design */
+    letter-spacing: -2px; 
+    
     margin-bottom: 32px;
-    max-width: 850px; 
     margin-left: 0; 
     margin-right: 0;
     
-    /* Gradient Text */
-    background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
+    /* Color: Use a very subtle gradient or pure off-white */
+    color: #e4e4e7; /* Light grey/white */
+    font-weight: 390;
 }
 
-/* 3. CTA Button */
+/* CTA Button Alignment */
 .hero-cta-wrapper {
     margin-bottom: 64px;
     display: flex;
@@ -244,10 +252,17 @@ img, svg {
 }
 
 /* 4. IDE Container */
+/* 4. IDE Container */
 .ide-container {
+    /* Fills the full available width of the parent container */
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    
+    /* CHANGED: Removed specific max-width so it matches the main container width */
+    /* max-width: 1200px; */ 
+    
+    /* CHANGED: Set margin to 0 to align left, instead of centering with 'auto' */
+    margin: 0;
+    
     border-radius: 12px;
     
     /* Premium Window Look */
@@ -419,7 +434,7 @@ img, svg {
    TRUSTED BY SECTION
    ========================================= */
 .trusted-by {
-    background-color: #0a0a0a; 
+    background-color: var(--bg-body); 
     padding: 80px 0;
 }
 
@@ -453,8 +468,32 @@ img, svg {
 .feature-split {
     display: flex;
     align-items: center;
-    gap: 80px;
-    margin-bottom: 160px; /* Increased spacing between sections for better flow */
+    
+    /* 1. Internal Spacing (Crucial for the "Card" look) */
+    padding-top: 10px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px; 
+    
+    /* 2. Gap between Text and Image */
+    gap: 40px; 
+    
+    /* 3. External Spacing */
+    margin-bottom: 80px; /* Reduced slightly since the card itself is now larger */
+    
+    /* 4. Visual Styles */
+    background-color: rgb(27, 25, 19); 
+    border: 1px solid #27272a; /* Subtle border to define the edge */
+    border-radius: 5px; /* Large rounded corners matching the design */
+    
+    /* Ensures nothing pokes out of the rounded corners */
+    overflow: hidden; 
+}
+
+/* CRITICAL FIX: Remove the margin from the LAST feature 
+   so it doesn't stack with the section padding below it */
+.feature-split:last-child {
+    margin-bottom: 0;
 }
 
 /* Reverses the order for the middle section (Image Left, Text Right) */
@@ -503,7 +542,7 @@ img, svg {
 /* Orange Link Style matching the images */
 .link-arrow.orange-accent {
     color: #ff8f4a; /* Precise orange from the screenshots */
-    border-bottom: 1px solid transparent; /* Remove default underline */
+    border-bottom: none; /* Remove default underline */
     font-weight: 500;
     font-size: 16px;
     transition: opacity 0.2s ease;
@@ -511,7 +550,7 @@ img, svg {
 
 .link-arrow.orange-accent:hover {
     opacity: 0.8;
-    border-bottom: 1px solid #ff8f4a; /* Add underline on hover */
+    border-bottom: none; /* Add underline on hover */
 }
 
 /* =========================================
@@ -540,7 +579,7 @@ img, svg {
 
 .testimonial-card {
     /* Slightly lighter dark background for contrast */
-    background-color: #0f0f10; 
+    background-color: rgb(27, 25, 19);
     border: 1px solid #27272a;
     border-radius: 12px;
     padding: 32px;
@@ -623,7 +662,7 @@ img, svg {
 }
 
 .frontier-card {
-    background-color: #0f0f10; /* Dark card background */
+    background-color: rgb(27, 25, 19); /* Dark card background */
     border: 1px solid #27272a;
     border-radius: 12px;
     overflow: hidden; /* Ensures images don't overflow rounded corners */
@@ -681,7 +720,7 @@ img, svg {
 .changelog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 24px;
     margin-bottom: 24px;
 }
 
@@ -737,7 +776,7 @@ img, svg {
 
 .research-section {
     padding: 100px 0;
-    background-color: #000;
+    background-color: var(--bg-body);
 }
 
 .research-split {
