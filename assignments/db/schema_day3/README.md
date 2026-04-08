@@ -1,8 +1,12 @@
 # Clinic Appointment and Diagnostics Platform ERD
 
+
 This repository contains the architectural design and database schema for a Refined Clinic Appointment and Diagnostics Platform. The system manages the full patient lifecycle, including scheduling, clinical consultations, financial transactions, and diagnostic reporting.
 
 ---
+
+## Diagram 
+![ER Diagram](er_diagram_hospita.png)
 
 ## ERD Notation Guide
 The schema utilizes Crow's Foot Notation to define relationships between entities:
