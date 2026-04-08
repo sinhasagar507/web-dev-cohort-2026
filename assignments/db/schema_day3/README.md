@@ -5,9 +5,6 @@ This repository contains the architectural design and database schema for a Refi
 
 ---
 
-## Diagram 
-![ER Diagram](images/er_diagram_hospita.png)
-
 ## ERD Notation Guide
 The schema utilizes Crow's Foot Notation to define relationships between entities:
 * **Single Bar ( | ):** Represents a cardinality of "One."
