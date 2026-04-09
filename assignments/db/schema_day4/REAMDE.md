@@ -4,6 +4,9 @@ This repository contains the database design for a specialized parking managemen
 
 ---
 
+## Schema 
+![Schema Diagram](parking_system.jpg)
+
 ## System Overview
 
 The schema is divided into four logical modules to ensure high normalization and data integrity:
